@@ -2,7 +2,11 @@
 
 This is the public GitHub home of Mozilla's Release Operations (RelOps) team. We build and operate the worker fleet that runs Firefox continuous integration jobs in Taskcluster. That includes machine images, host configuration, hardware and device provisioning, cloud infrastructure, and fleet health.
 
-Mozilla staff looking for runbooks, service ownership, access procedures, or internal support should start with [RelOps on Mana](https://mana.mozilla.org/wiki/spaces/ROPS/overview). GitHub holds our public code and project documentation. Mana has the broader set of team and operational documentation.
+GitHub holds our public code and project documentation. Mozilla staff can find our internal documentation and contact the team here:
+
+- 💬 [`#relops` on Mozilla Slack](https://mozilla.enterprise.slack.com/archives/CNN462N2F) - Ask the team questions here. The channel requires a Mozilla Slack account.
+- 📚 [RelOps on Mana](https://mana.mozilla.org/wiki/spaces/ROPS/overview) - The larger collection of internal runbooks, service ownership notes, access procedures, and team documentation.
+- 🎤 [`presentations`](https://github.com/mozilla-platform-ops/presentations) - Public presentations and diagrams about the team's infrastructure and projects.
 
 ## Platform support
 
@@ -51,17 +55,12 @@ Firefox tests run on physical Android devices through external device providers.
 - 📲 [`BuildWatch`](https://github.com/mozilla-platform-ops/BuildWatch) - An iOS app for checking Firefox CI pushes and jobs from Treeherder and Taskcluster.
 - 🤖 [`BuildWatch-Android`](https://github.com/mozilla-platform-ops/BuildWatch-Android) - The Android version of BuildWatch, with try-push filtering, job details, failure summaries, and build notifications.
 
-## Documentation
-
-- 📚 [RelOps on Mana](https://mana.mozilla.org/wiki/spaces/ROPS/overview) - The larger collection of internal runbooks, service ownership notes, access procedures, and team documentation. Mana requires a Mozilla account.
-- 🎤 [`presentations`](https://github.com/mozilla-platform-ops/presentations) - Public presentations and diagrams about the team's infrastructure and projects.
-
 ## How changes reach workers
 
 Image and machine configuration usually starts in [`worker-images`](https://github.com/mozilla-platform-ops/worker-images) or [`ronin_puppet`](https://github.com/mozilla-platform-ops/ronin_puppet). The worker-pool definitions that deploy those changes live in [`mozilla-releng/fxci-config`](https://github.com/mozilla-releng/fxci-config).
 
 Firefox CI images must pass tier 1 integration tests before they are deployed to production pools.
 
-## Contributing and getting help
+## Contributing
 
-Each repository documents its own setup, tests, and contribution process. Send pull requests to the repository that owns the code, and use the issue tracker named in that repository. Mozilla staff can use [Mana](https://mana.mozilla.org/wiki/spaces/ROPS/overview) to find internal runbooks and the right team contact for operational help.
+Each repository documents its own setup, tests, and contribution process. Send pull requests to the repository that owns the code, and use the issue tracker named in that repository.
